@@ -1,4 +1,3 @@
-// src/components/LayoutGeneratorTool.tsx
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { LayoutConfig, Layout } from '../types';
@@ -62,18 +61,42 @@ const LayoutGeneratorTool: React.FC<Props> = ({ config }) => {
 
   useEffect(() => {
     const generator = new LayoutGenerator(config);
-    const generatedLayouts: Layout[] = [
-      { name: 'Classic Vertical', html: generator.generateCouponLayout1() },
-      { name: 'Two Columns', html: generator.generateCouponLayout2() },
-      { name: 'Price Highlight', html: generator.generateCouponLayout3() },
-      { name: 'Grid Layout', html: generator.generateCouponLayout4() },
-      { name: 'Divider Style', html: generator.generateCouponLayout5() },
-      { name: 'Card Style', html: generator.generateCouponLayout6() },
-      { name: 'Tag Style', html: generator.generateCouponLayout7() },
-      { name: 'Gradient Style', html: generator.generateCouponLayout8() },
-      { name: 'Rounded Section', html: generator.generateCouponLayout9() },
-      { name: 'Emphasis Border', html: generator.generateCouponLayout10() }
-    ];
+    // 自动获取所有布局方法
+    const generatedLayouts: Layout[] = Object.getOwnPropertyNames(LayoutGenerator.prototype)
+      .filter(name => name.startsWith('generateCouponLayout'))
+      .map(methodName => {
+        // 从方法名提取布局编号
+        const layoutNumber = methodName.replace('generateCouponLayout', '');
+        // 生成更友好的布局名称
+        const layoutNames: { [key: string]: string } = {
+          '1': 'Classic Vertical',
+          '2': 'Two Columns',
+          '3': 'Price Highlight',
+          '4': 'Grid Layout',
+          '5': 'Divider Style',
+          '6': 'Card Style',
+          '7': 'Tag Style',
+          '8': 'Gradient Style',
+          '9': 'Rounded Section',
+          '10': 'Emphasis Border',
+          '11': 'Modern Simple',
+          '12': 'Marker Style',
+          '13': 'Circle Decoration',
+          '14': 'Wave Border',
+          '15': 'Double Layer',
+          '16': 'Modern Card',
+          '17': 'Premium Tag',
+          '18': 'Minimalist',
+          '19': 'Diagonal',
+          '20': 'Modern Split'
+        };
+
+        return {
+          name: layoutNames[layoutNumber] || `Layout ${layoutNumber}`,
+          html: (generator as any)[methodName]()
+        };
+      });
+    
     setLayouts(generatedLayouts);
   }, [config]);
 
