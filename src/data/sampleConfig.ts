@@ -1,3 +1,4 @@
+// src/data/sampleConfig.ts
 import { LayoutConfig } from '../types';
 
 export const sampleConfig: LayoutConfig = {
