@@ -1,5 +1,6 @@
+// src/theme/theme.ts
 import React, { ReactElement } from 'react';
-import { ThemeProvider as StyledThemeProvider, DefaultTheme } from 'styled-components';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 // 主题类型定义
 export type Theme = {
@@ -21,6 +22,7 @@ export type Theme = {
     sm: string;
     md: string;
     lg: string;
+    xl: string;
   };
   typography: {
     price: {
@@ -41,36 +43,32 @@ export type Theme = {
   };
 };
 
-// 声明 styled-components 的 DefaultTheme
-declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
-}
-
-// 主题默认配置
+// 主题配置
 export const theme: Theme = {
   colors: {
-    primary: '#FF3B30',        // 折扣价格的红色
-    secondary: '#FFB800',      // 星标图标的金色
+    primary: '#FF3B30',
+    secondary: '#FFB800',
     text: {
-      primary: '#000000',      // 价格的黑色
-      secondary: '#666666',    // Coupon applied 的灰色
-      discount: '#FF3B30'      // 50% 的红色
+      primary: '#000000',
+      secondary: '#666666',
+      discount: '#FF3B30'
     },
     background: {
-      main: '#ffffff',         // 整体背景
-      card: '#ffffff'          // 卡片背景
+      main: '#F5F5F5',
+      card: '#FFFFFF'
     }
   },
   spacing: {
     xs: '4px',
     sm: '8px',
     md: '16px',
-    lg: '20px'
+    lg: '24px',
+    xl: '32px'
   },
   typography: {
     price: {
       fontSize: '20px',
-      fontWeight: 'bold'
+      fontWeight: '600'
     },
     discount: {
       fontSize: '18px',
@@ -103,28 +101,4 @@ export const ThemeProvider = (props: ThemeProviderProps): ReactElement => {
     },
     props.children
   );
-};
-
-// 创建自定义主题的工具函数
-export const createCustomTheme = (overrides: Partial<Theme> = {}): Theme => {
-  return {
-    ...theme,
-    ...overrides,
-    colors: {
-      ...theme.colors,
-      ...(overrides.colors || {})
-    },
-    spacing: {
-      ...theme.spacing,
-      ...(overrides.spacing || {})
-    },
-    typography: {
-      ...theme.typography,
-      ...(overrides.typography || {})
-    },
-    shadows: {
-      ...theme.shadows,
-      ...(overrides.shadows || {})
-    }
-  } as Theme;
 };

@@ -7,7 +7,7 @@ export class LayoutGenerator {
   generateCouponLayout1(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -31,7 +31,7 @@ export class LayoutGenerator {
   generateCouponLayout2(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -58,7 +58,7 @@ export class LayoutGenerator {
   generateCouponLayout3(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -89,7 +89,7 @@ export class LayoutGenerator {
   generateCouponLayout4(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -112,7 +112,7 @@ export class LayoutGenerator {
   generateCouponLayout5(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -138,7 +138,7 @@ export class LayoutGenerator {
   generateCouponLayout6(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -179,7 +179,7 @@ export class LayoutGenerator {
   generateCouponLayout7(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -218,7 +218,7 @@ export class LayoutGenerator {
   generateCouponLayout8(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: linear-gradient(135deg, #fff0f0 0%, #fff 100%);
@@ -243,7 +243,7 @@ export class LayoutGenerator {
   generateCouponLayout9(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -278,7 +278,7 @@ export class LayoutGenerator {
   generateCouponLayout10(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -320,7 +320,7 @@ export class LayoutGenerator {
   generateCouponLayout11(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -371,7 +371,7 @@ export class LayoutGenerator {
   generateCouponLayout12(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -421,7 +421,7 @@ export class LayoutGenerator {
   generateCouponLayout13(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: #fafafa;
@@ -464,7 +464,7 @@ export class LayoutGenerator {
   generateCouponLayout14(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -514,7 +514,7 @@ export class LayoutGenerator {
   generateCouponLayout15(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -554,7 +554,7 @@ export class LayoutGenerator {
   generateCouponLayout16(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -615,7 +615,7 @@ export class LayoutGenerator {
   generateCouponLayout17(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0f5ff 100%);
@@ -657,7 +657,7 @@ export class LayoutGenerator {
   generateCouponLayout18(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -709,7 +709,7 @@ export class LayoutGenerator {
   generateCouponLayout19(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -765,7 +765,7 @@ export class LayoutGenerator {
   generateCouponLayout20(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -826,7 +826,7 @@ export class LayoutGenerator {
   generateCouponLayout21(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
@@ -882,7 +882,7 @@ export class LayoutGenerator {
   generateCouponLayout22(): string {
     return `
       <div style="
-        width: 630px;
+        width: 330px;
         height: 122px;
         padding: ${this.config.padding}px;
         background: white;
