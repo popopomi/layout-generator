@@ -49,23 +49,23 @@ declare module 'styled-components' {
 // 主题默认配置
 export const theme: Theme = {
   colors: {
-    primary: '#FF3B30',
-    secondary: '#FFB800',
+    primary: '#FF3B30',        // 折扣价格的红色
+    secondary: '#FFB800',      // 星标图标的金色
     text: {
-      primary: '#000000',
-      secondary: '#666666',
-      discount: '#FF3B30'
+      primary: '#000000',      // 价格的黑色
+      secondary: '#666666',    // Coupon applied 的灰色
+      discount: '#FF3B30'      // 50% 的红色
     },
     background: {
-      main: '#F5F5F5',
-      card: '#FFFFFF'
+      main: '#ffffff',         // 整体背景
+      card: '#ffffff'          // 卡片背景
     }
   },
   spacing: {
     xs: '4px',
     sm: '8px',
     md: '16px',
-    lg: '24px'
+    lg: '20px'
   },
   typography: {
     price: {
