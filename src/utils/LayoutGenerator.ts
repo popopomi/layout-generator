@@ -928,47 +928,6 @@ export class LayoutGenerator {
           </div>
         </div>
       </div>
-    `;
-  }
-
-  // 布局 23: 圆角装饰布局
-  generateCouponLayout23(): string {
-    return `
-      <div style="
-        width: 630px;
-        height: 122px;
-        padding: ${this.config.padding}px;
-        background: white;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      ">
-        <div style="
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          top: -8px;
-          left: 50%;
-          transform: translateX(-50%) rotate(45deg);
-          background: #ff4d4f;
-        "></div>
-        <div style="
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%) rotate(45deg);
-          background: #ff4d4f;
-        "></div>
-        <div style="
-          flex: 1;
-          padding: 0 24px;
-          text-align: center;
-        ">
-          <div style="
   `;
   }
 } // 类的结束括号应该在这里，所有布局方法之后
