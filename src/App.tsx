@@ -1,7 +1,8 @@
-import React from 'react';
-import LayoutGeneratorTool from './components/LayoutGeneratorTool'; // 移除花括号
-import { sampleConfig } from './data/sampleConfig';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
+import { ThemeProvider } from './theme/theme';
+import LayoutGeneratorTool from './components/LayoutGeneratorTool';
+import { sampleConfig } from './data/sampleConfig';
 
 const AppContainer = styled.div`
   font-family: 'Pretendard', -apple-system, sans-serif;
@@ -10,13 +11,14 @@ const AppContainer = styled.div`
   padding: 20px;
 `;
 
-function App() {
+const App = (): ReactElement => {
   return (
-    <AppContainer>
-      <h1>Layout Generator</h1>
-      <LayoutGeneratorTool config={sampleConfig} />
-    </AppContainer>
+    <ThemeProvider>
+      <AppContainer>
+        <LayoutGeneratorTool config={sampleConfig} />
+      </AppContainer>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
