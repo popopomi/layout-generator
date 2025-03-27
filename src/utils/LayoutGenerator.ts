@@ -931,160 +931,44 @@ export class LayoutGenerator {
     `;
   }
 
-    // 布局 23: 圆角装饰布局（续）
-    generateCouponLayout23(): string {
-        return `
+  // 布局 23: 圆角装饰布局
+  generateCouponLayout23(): string {
+    return `
+      <div style="
+        width: 630px;
+        height: 122px;
+        padding: ${this.config.padding}px;
+        background: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      ">
+        <div style="
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: -8px;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg);
+          background: #ff4d4f;
+        "></div>
+        <div style="
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg);
+          background: #ff4d4f;
+        "></div>
+        <div style="
+          flex: 1;
+          padding: 0 24px;
+          text-align: center;
+        ">
           <div style="
-            width: 630px;
-            height: 122px;
-            padding: ${this.config.padding}px;
-            background: white;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          ">
-            <div style="
-              width: 16px;
-              height: 16px;
-              position: absolute;
-              top: -8px;
-              left: 50%;
-              transform: translateX(-50%) rotate(45deg);
-              background: #ff4d4f;
-            "></div>
-            <div style="
-              width: 16px;
-              height: 16px;
-              position: absolute;
-              bottom: -8px;
-              left: 50%;
-              transform: translateX(-50%) rotate(45deg);
-              background: #ff4d4f;
-            "></div>
-            <div style="
-              flex: 1;
-              padding: 0 24px;
-              text-align: center;
-              border-right: 1px dashed #ff4d4f;
-            ">
-              <div style="color: #ff4d4f; font-size: 24px; font-weight: bold;">50% 6,000원</div>
-              <div style="color: #666; font-size: 14px;">Coupon applied, save 6000원</div>
-            </div>
-            <div style="
-              flex: 1;
-              padding: 0 24px;
-              text-align: center;
-            ">
-              <div style="color: #1890ff; font-size: 16px;">5% 추가 혜택, 최대 ₩1000 할인</div>
-              <div style="color: #999; font-size: 12px; text-decoration: line-through;">원가 12,000원</div>
-            </div>
-          </div>
-        `;
-      }
-    
-      // 布局 24: 现代简约布局
-      generateCouponLayout24(): string {
-        return `
-          <div style="
-            width: 630px;
-            height: 122px;
-            padding: ${this.config.padding}px;
-            background: #fafafa;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-          ">
-            <div style="
-              width: 6px;
-              position: absolute;
-              top: 20px;
-              bottom: 20px;
-              left: 0;
-              background: linear-gradient(to bottom, #ff4d4f, #ff7875);
-              border-radius: 3px;
-            "></div>
-            <div style="
-              flex: 1;
-              padding-left: 24px;
-            ">
-              <div style="
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 8px;
-              ">
-                <span style="color: #ff4d4f; font-size: 24px; font-weight: bold;">50% 6,000원</span>
-                <span style="
-                  background: rgba(255,77,79,0.1);
-                  color: #ff4d4f;
-                  padding: 4px 8px;
-                  border-radius: 4px;
-                  font-size: 12px;
-                ">SPECIAL</span>
-              </div>
-              <div style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              ">
-                <span style="color: #1890ff; font-size: 16px;">5% 추가 혜택, 최대 ₩1000 할인</span>
-                <span style="color: #999; font-size: 12px; text-decoration: line-through;">원가 12,000원</span>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-    
-      // 布局 25: 极简分隔布局
-      generateCouponLayout25(): string {
-        return `
-          <div style="
-            width: 630px;
-            height: 122px;
-            padding: ${this.config.padding}px;
-            background: white;
-            border-radius: 8px;
-            display: flex;
-            position: relative;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          ">
-            <div style="
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 30px;
-              height: 30px;
-              background: white;
-              border: 2px solid #eee;
-              border-radius: 50%;
-            "></div>
-            <div style="
-              flex: 1;
-              padding: 0 40px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              border-right: 1px dashed #eee;
-            ">
-              <div style="color: #ff4d4f; font-size: 24px; font-weight: bold;">50% 6,000원</div>
-              <div style="color: #666; font-size: 14px;">Coupon applied, save 6000원</div>
-            </div>
-            <div style="
-              flex: 1;
-              padding: 0 40px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            ">
-              <div style="color: #1890ff; font-size: 16px;">5% 추가 혜택, 최대 ₩1000 할인</div>
-              <div style="color: #999; font-size: 12px; text-decoration: line-through;">원가 12,000원</div>
-            </div>
-          </div>
-        `;
-      }    
+  `;
+  }
 } // 类的结束括号应该在这里，所有布局方法之后
